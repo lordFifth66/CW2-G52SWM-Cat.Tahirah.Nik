@@ -17,8 +17,9 @@ public class MenuState extends GameState {
 	
 	private int currentOption = 0;
 	private String[] options = {
-		"START",
-		"QUIT"
+			"START",
+			"MAP",
+			"QUIT"
 	};
 	
 	public MenuState(GameStateManager gsm) {
@@ -42,10 +43,12 @@ public class MenuState extends GameState {
 		
 		Content.drawString(g, options[0], 44, 90);
 		Content.drawString(g, options[1], 48, 100);
+		Content.drawString(g, options[2], 46, 110);
 		
 		if(currentOption == 0) g.drawImage(diamond, 25, 86, null);
 		else if(currentOption == 1) g.drawImage(diamond, 25, 96, null);
-		
+		else if(currentOption == 2) g.drawImage(diamond, 25, 106, null);
+	
 	}
 	
 	public void handleInput() {
@@ -68,6 +71,9 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.PLAY);
 		}
 		if(currentOption == 1) {
+			
+		}
+		if(currentOption == 2) {
 			System.exit(0);
 		}
 	}
