@@ -1,12 +1,13 @@
 package com.neet.DiamondHunter.JavaFX;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Map extends Application{
+public class FXMain extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -18,5 +19,9 @@ public class Map extends Application{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
 	}
 }
