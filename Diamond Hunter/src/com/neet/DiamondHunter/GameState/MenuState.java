@@ -5,6 +5,7 @@ package com.neet.DiamondHunter.GameState;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import com.neet.DiamondHunter.JavaFX.Map;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
@@ -14,6 +15,7 @@ public class MenuState extends GameState {
 	
 	private BufferedImage bg;
 	private BufferedImage diamond;
+	
 	
 	private int currentOption = 0;
 	private String[] options = {
@@ -71,7 +73,7 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.PLAY);
 		}
 		if(currentOption == 1) {
-			
+			Map.launch(Map.class);
 		}
 		if(currentOption == 2) {
 			System.exit(0);
