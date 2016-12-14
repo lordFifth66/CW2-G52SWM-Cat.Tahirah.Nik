@@ -1,5 +1,8 @@
 package com.neet.DiamondHunter.JavaFX;
 
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,11 +20,25 @@ public class Controller {
 
     @FXML
     private Button runGame;
+    
+    @FXML
+    private Canvas canvas;
+    //map create
+    private Map maps;
 
     @FXML
     void initialize() {
+    	
+    	GraphicsContext gc = canvas.getGraphicsContext2D();
+    	maps = new Map(16);
+    	maps.loadMap();
+    	maps.draw(gc);
     	runGame.setOnAction((event) ->{
     		Game.Run();
     	});
+    	
     }
+    
+    
+    
 }
