@@ -11,15 +11,18 @@ import javafx.scene.image.WritableImage;
 
 public class Map {
 	
+	//size of the tiles in pixel
 	private int tileSize;
 	private int oriTileSize;
 	
+	//map
 	public int [][] map;
 	private int numTilesAcross;
 	
 	private int numRows;
 	private int numCols;
 	
+	//tiles image store here
 	private Image[][] tiles;
 	
 	
@@ -29,6 +32,7 @@ public class Map {
 		oriTileSize = 16;
 	}
 
+	//load the tiles image into an array
 	private void loadTiles()
     {
         Image tilesSet = new Image("/Tilesets/testtileset.gif");
@@ -54,6 +58,7 @@ public class Map {
 		}
     }
 	
+	//load the position for all tiles based on testmap.map
 	public void loadMap()
     {
     	try
@@ -82,7 +87,8 @@ public class Map {
     	loadTiles();
     }
 	
-public void draw(GraphicsContext gc) {
+	//draw the map into the scene
+	public void draw(GraphicsContext gc) {
 		
 		for(int row = 0; row < numRows; row++) {
 		
@@ -101,11 +107,8 @@ public void draw(GraphicsContext gc) {
 					tiles[r][c],
 					col * tileSize,
 					row * tileSize
-				);
-				
-			}
-			
-		}
-		
+				);	
+			}	
+		}	
 	}
 }

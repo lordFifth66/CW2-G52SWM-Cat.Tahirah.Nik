@@ -46,8 +46,6 @@ public class Controller {
     	maps = new Map(16);
     	maps.loadMap();
     	maps.draw(gc);
-    	
-    	
 
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
@@ -58,10 +56,16 @@ public class Controller {
     				yCoordinate.setText(Integer.toString(ylocation));
     			}
     		});
-    	runGame.setOnAction((event) ->{
+    	
+    	canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+    		public void handle (MouseEvent mouseEvent) {
+    				System.out.println(xlocation + " " + ylocation);
+    			}
+    		});
+    	
+    	runGame.setOnAction((event) -> {
     		Game.Run();
     	});
-    	
     }
     
     
