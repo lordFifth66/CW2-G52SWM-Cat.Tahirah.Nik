@@ -32,8 +32,11 @@ public class Controller {
 
     @FXML
     void initialize() {
-    	maps = new Map();
-    	maps.drawMap(canvas);
+    	maps = new Map(16);
+    	maps.loadMap();
+    	GraphicsContext gc = canvas.getGraphicsContext2D();
+
+    	
     	runGame.setOnAction((event) ->{
     		Game.Run();
     	});

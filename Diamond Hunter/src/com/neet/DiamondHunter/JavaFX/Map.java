@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import com.neet.DiamondHunter.TileMap.Tile;
-
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 
@@ -27,7 +25,7 @@ public class Map {
 		this.tileSize = tileSize;
 	}
 
-	public void loadTiles()
+	private void loadTiles()
     {
         Image tilesSet = new Image("/Tilesets/testtileset.gif");
         numTilesAcross = (int) (tilesSet.getWidth() / tileSize);
@@ -79,5 +77,6 @@ public class Map {
     	catch(Exception e) {
 			e.printStackTrace();
 		}
+    	loadTiles();
     }
 }
