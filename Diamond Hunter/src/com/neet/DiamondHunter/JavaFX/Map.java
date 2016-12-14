@@ -14,8 +14,8 @@ public class Map {
 	private int tileSize;
 	private int oriTileSize;
 	
+	public int [][] map;
 	private int numTilesAcross;
-	private int [][] map;
 	
 	private int numRows;
 	private int numCols;
