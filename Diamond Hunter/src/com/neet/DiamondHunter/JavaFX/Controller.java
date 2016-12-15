@@ -8,8 +8,13 @@ import java.util.ResourceBundle;
 
 import com.neet.DiamondHunter.Main.Game;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+
 //this class contains Controller for JavaFX
 public class Controller {
 	@FXML
@@ -23,20 +28,47 @@ public class Controller {
     
     @FXML
     private Canvas canvas;
+    
+    @FXML
+    private Label xCoordinate;
+
+    @FXML
+    private Label yCoordinate;
     //map create
     private Map maps;
+    
+    private int xlocation;
+    private int ylocation;
 
     @FXML
     void initialize() {
     	
+    	Image test1 = new Image("/Sprites/items.gif");
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	maps = new Map(16);
     	maps.loadMap();
     	maps.draw(gc);
-    	runGame.setOnAction((event) ->{
+
+    	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
+    		public void handle (MouseEvent mouseEvent) {
+    				
+    				xlocation = (int) (mouseEvent.getX() / 16);
+    				ylocation = (int) (mouseEvent.getY() / 16);
+    				xCoordinate.setText(Integer.toString(xlocation));
+    				yCoordinate.setText(Integer.toString(ylocation));
+    			}
+    		});
+    	
+    	canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+    		public void handle (MouseEvent mouseEvent) {
+    				System.out.println(xlocation + " " + ylocation);
+    		    	gc.drawImage(test1, xlocation * 16, ylocation * 16);
+    			}
+    		});
+    	
+    	runGame.setOnAction((event) -> {
     		Game.Run();
     	});
-    	
     }
     
     
