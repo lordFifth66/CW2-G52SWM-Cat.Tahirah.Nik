@@ -9,6 +9,7 @@ public class Objects {
 	private Image axe;
 	private Image boat;
 	
+	//coordinate for boat and axe
     public static int axeX;
     public static int axeY;
     public static int boatX;
@@ -26,6 +27,7 @@ public class Objects {
     	boatY = 12;
 	}
 	
+
 	public void loadItem()
 	{
 		Image itemList = new Image("/Sprites/items.gif");

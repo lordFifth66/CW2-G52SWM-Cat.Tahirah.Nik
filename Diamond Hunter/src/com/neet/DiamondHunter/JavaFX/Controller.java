@@ -12,7 +12,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 //this class contains Controller for JavaFX
@@ -48,18 +47,22 @@ public class Controller {
     @FXML
     void initialize() {
     	
-    	GraphicsContext gc = canvas.getGraphicsContext2D();    	
+    	GraphicsContext gc = canvas.getGraphicsContext2D();
+    	//load map
     	maps = new Map(16);
     	maps.loadMap();
     	maps.draw(gc);
     	
+    	//load item
     	items = new Objects(16);
     	items.loadItem();
     	
-    	drawItem(gc);
+    	draw(gc);
     	
+    	//axe if 0, else boat
     	itemStatus = 0;
     	
+    	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
     				
@@ -70,6 +73,7 @@ public class Controller {
     			}
     		});
     	
+    	//change the item coordinate when click on the map
     	canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
     			
@@ -85,16 +89,25 @@ public class Controller {
     						Objects.boatX = (int)(mouseEvent.getX() / 16);
     						Objects.boatY = (int)(mouseEvent.getY() / 16);	
     					}
-    					drawItem(gc);    					
+    					draw(gc);    					
+    				}
+    				else
+    				{
+    					//warning if try to put item at tree/lake...(Your job nikky)
     				}
     			}
     		});
     	
     	runGame.setOnAction((event) -> {
-    		Game.Run();
+    		if (checkTiles(Objects.axeX, Objects.axeY) && 
+    				checkTiles(Objects.boatX, Objects.boatY))
+    		{
+    			Game.Run();    			
+    		}
     	});
     }
     
+    //check the tile's type
     private boolean checkTiles(int x, int y)
     {
     	if(maps.map[y][x] < 20)
@@ -103,7 +116,8 @@ public class Controller {
     		return false;    		
     }
     
-    private void drawItem(GraphicsContext gc)
+    //draw the map
+    private void draw(GraphicsContext gc)
     {
 		maps.draw(gc);
 		items.draw(gc);
