@@ -14,6 +14,7 @@ import com.neet.DiamondHunter.Entity.Item;
 import com.neet.DiamondHunter.Entity.Player;
 import com.neet.DiamondHunter.Entity.Sparkle;
 import com.neet.DiamondHunter.HUD.Hud;
+import com.neet.DiamondHunter.JavaFX.Objects;
 import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.Manager.Data;
 import com.neet.DiamondHunter.Manager.GameStateManager;
@@ -176,12 +177,12 @@ public class PlayState extends GameState {
 		
 		item = new Item(tileMap);
 		item.setType(Item.AXE);
-		item.setTilePosition(26, 37);
+		item.setTilePosition(Objects.axeY, Objects.axeX);
 		items.add(item);
 		
 		item = new Item(tileMap);
 		item.setType(Item.BOAT);
-		item.setTilePosition(12, 4);
+		item.setTilePosition(Objects.boatY, Objects.boatX);
 		items.add(item);
 		
 	}

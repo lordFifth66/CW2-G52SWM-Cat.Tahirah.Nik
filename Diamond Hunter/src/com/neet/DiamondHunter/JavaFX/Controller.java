@@ -34,21 +34,32 @@ public class Controller {
 
     @FXML
     private Label yCoordinate;
-    //map create
+    //create map
     private Map maps;
+    private Objects items;
     
     private int xlocation;
     private int ylocation;
+    
+    //item coordinate
+    public static int itemStatus;
+
 
     @FXML
     void initialize() {
     	
-    	Image test1 = new Image("/Sprites/items.gif");
-    	GraphicsContext gc = canvas.getGraphicsContext2D();
+    	GraphicsContext gc = canvas.getGraphicsContext2D();    	
     	maps = new Map(16);
     	maps.loadMap();
     	maps.draw(gc);
-
+    	
+    	items = new Objects(16);
+    	items.loadItem();
+    	
+    	drawItem(gc);
+    	
+    	itemStatus = 0;
+    	
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
     				
@@ -61,8 +72,21 @@ public class Controller {
     	
     	canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
-    				System.out.println(xlocation + " " + ylocation);
-    		    	gc.drawImage(test1, xlocation * 16, ylocation * 16);
+    			
+    				if (checkTiles(xlocation, ylocation))
+    				{
+    					if (itemStatus == 0)
+    					{
+    						Objects.axeX = (int)(mouseEvent.getX() / 16);
+    						Objects.axeY = (int)(mouseEvent.getY() / 16);
+    					}
+    					else
+    					{
+    						Objects.boatX = (int)(mouseEvent.getX() / 16);
+    						Objects.boatY = (int)(mouseEvent.getY() / 16);	
+    					}
+    					drawItem(gc);    					
+    				}
     			}
     		});
     	
@@ -71,6 +95,18 @@ public class Controller {
     	});
     }
     
+    private boolean checkTiles(int x, int y)
+    {
+    	if(maps.map[y][x] < 20)
+    		return true;     		
+    	else
+    		return false;    		
+    }
     
+    private void drawItem(GraphicsContext gc)
+    {
+		maps.draw(gc);
+		items.draw(gc);
+    }
     
 }
