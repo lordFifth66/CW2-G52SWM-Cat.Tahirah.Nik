@@ -20,9 +20,9 @@
                         <Canvas fx:id="canvas" height="581.0" layoutX="-2.0" style="border: 5px;" width="553.0" />
                      </children>
                   </AnchorPane>
-                  <Text layoutX="141.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter Map" textAlignment="CENTER" wrappingWidth="344.65625">
+                  <Text fill="WHITE" layoutX="8.0" layoutY="67.0" stroke="#433d3d" strokeDashOffset="5.0" strokeType="OUTSIDE" strokeWidth="2.0" text="Diamond Hunter Map" textAlignment="CENTER" wrappingWidth="586.0000032186508">
                      <font>
-                        <Font name="AvenirLTStd-Book" size="27.0" />
+                        <Font name="NicknameDEMO" size="56.0" />
                      </font>
                   </Text>
                </children>
