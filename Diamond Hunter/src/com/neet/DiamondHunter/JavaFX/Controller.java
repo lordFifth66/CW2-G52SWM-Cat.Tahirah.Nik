@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
@@ -34,6 +35,19 @@ public class Controller {
 
     @FXML
     private Label yCoordinate;
+    
+    @FXML
+    private TextField axeFieldX;
+
+    @FXML
+    private TextField axeFieldY;
+
+    @FXML
+    private TextField boatFieldX;
+
+    @FXML
+    private TextField boatFieldY;
+    
     //create map
     private Map maps;
     private Objects items;
@@ -107,6 +121,10 @@ public class Controller {
     {
 		maps.draw(gc);
 		items.draw(gc);
+		axeFieldX.setText(Integer.toString(Objects.axeX));
+    	axeFieldY.setText(Integer.toString(Objects.axeY));
+    	boatFieldX.setText(Integer.toString(Objects.boatX));
+    	boatFieldY.setText(Integer.toString(Objects.boatY));
     }
     
 }
