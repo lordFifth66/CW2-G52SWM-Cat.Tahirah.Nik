@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 //this class contains Controller for JavaFX
 public class Controller {
@@ -122,7 +123,9 @@ public class Controller {
     		if (checkTiles(Objects.axeX, Objects.axeY) && 
     				checkTiles(Objects.boatX, Objects.boatY))
     		{
-    			Game.Run();    			
+    			Stage currentStage = (Stage)runGame.getScene().getWindow();
+    			currentStage.close();
+    			Game.Run();    		
     		}
     	});
     }
