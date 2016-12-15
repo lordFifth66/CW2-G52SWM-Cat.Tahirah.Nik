@@ -71,6 +71,12 @@ public class Controller {
     	items = new Objects(16);
     	items.loadItem();
     	
+    	//disable the text field
+    	axeFieldX.setEditable(false);
+	    axeFieldY.setEditable(false);
+	    boatFieldX.setEditable(false);
+	    boatFieldY.setEditable(false);
+    	
     	draw(gc);
     	
     	//axe if 0, else boat
