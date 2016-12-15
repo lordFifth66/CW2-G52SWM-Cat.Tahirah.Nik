@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 //this class contains Controller for JavaFX
@@ -42,6 +43,7 @@ public class Controller {
     @FXML
     void initialize() {
     	
+    	Image test1 = new Image("/Sprites/items.gif");
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	maps = new Map(16);
     	maps.loadMap();
@@ -60,6 +62,7 @@ public class Controller {
     	canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
     				System.out.println(xlocation + " " + ylocation);
+    		    	gc.drawImage(test1, xlocation * 16, ylocation * 16);
     			}
     		});
     	
