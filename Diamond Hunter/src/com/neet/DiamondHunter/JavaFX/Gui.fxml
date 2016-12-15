@@ -3,17 +3,22 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="703.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.JavaFX.Controller">
    <children>
-      <SplitPane dividerPositions="0.7371638141809291" prefHeight="703.0" prefWidth="820.0">
+      <SplitPane dividerPositions="0.7212713936430318" prefHeight="703.0" prefWidth="820.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Canvas fx:id="canvas" height="581.0" layoutX="23.0" layoutY="83.0" width="553.0" />
+                  <AnchorPane layoutX="18.0" layoutY="83.0" style="-fx-border-color: black;">
+                     <children>
+                        <Canvas fx:id="canvas" height="581.0" layoutX="-2.0" style="border: 5px;" width="553.0" />
+                     </children>
+                  </AnchorPane>
                   <Text layoutX="141.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter Map" textAlignment="CENTER" wrappingWidth="344.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="27.0" />
@@ -21,27 +26,65 @@
                   </Text>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="701.0" prefWidth="256.0">
                <children>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe:" wrappingWidth="104.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe" wrappingWidth="104.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="23.0" />
                      </font>
                   </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat:" wrappingWidth="104.65625">
-                     <font>
-                        <Font name="AvenirLTStd-Book" size="27.0" />
-                     </font>
-                  </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="104.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="113.0" layoutY="210.0" prefHeight="10.0" prefWidth="74.0">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="113.0" layoutY="254.0" prefHeight="10.0" prefWidth="74.0">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat" wrappingWidth="104.65625">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="113.0" layoutY="365.0" prefHeight="10.0" prefWidth="74.0">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="113.0" layoutY="409.0" prefHeight="10.0" prefWidth="74.0">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="18.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-      <Button fx:id="runGame" layoutX="708.0" layoutY="646.0" mnemonicParsing="false" text="Confirm" />
+      <Button fx:id="runGame" layoutX="700.0" layoutY="641.0" mnemonicParsing="false" text="Confirm">
+         <font>
+            <Font name="AvenirLTStd-Book" size="19.0" />
+         </font></Button>
    </children>
 </AnchorPane>
