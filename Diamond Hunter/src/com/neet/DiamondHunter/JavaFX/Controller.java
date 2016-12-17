@@ -28,6 +28,12 @@ public class Controller {
     private Button runGame;
     
     @FXML
+    private Button axebutton;
+    
+    @FXML
+    private Button boatbutton;
+    
+    @FXML
     private Canvas canvas;
     
     @FXML
@@ -79,6 +85,16 @@ public class Controller {
 	    boatFieldY.setEditable(false);
     	
     	draw(gc);
+    	
+    	axebutton.setOnAction((event) -> {
+    		// Change Axe Position is clicked, itemStatus initialized to 0
+    		itemStatus=0;    
+    	});
+    	
+    	boatbutton.setOnAction((event) -> {
+    		// Change Boat Position is clicked, itemStatus initialized to 1
+    		itemStatus=1;    
+    	});
     	
     	//axe if 0, else boat
     	itemStatus = 0;
