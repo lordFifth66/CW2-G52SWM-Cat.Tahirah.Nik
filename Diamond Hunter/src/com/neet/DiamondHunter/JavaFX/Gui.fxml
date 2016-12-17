@@ -53,11 +53,6 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat" wrappingWidth="104.65625">
-                     <font>
-                        <Font name="AvenirLTStd-Book" size="23.0" />
-                     </font>
-                  </Text>
                   <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
@@ -78,9 +73,14 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="itemStatus" layoutX="5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="179.0" text="Change Axe's Position" textAlignment="CENTER">
+                  <Button fx:id="itemStatus" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe's Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
-                        <Font name="AvenirLTStd-Book" size="19.0" />
+                        <Font name="AvenirLTStd-Book" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="itemStatus1" layoutX="5.0" layoutY="317.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Boat's Position" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
                </children>
