@@ -2,6 +2,8 @@ package com.neet.DiamondHunter.JavaFX;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -130,7 +132,11 @@ public class Controller {
     				}
     				else
     				{
-    					//warning if try to put item at tree/lake...(Your job nikky)
+    					//warning if try to put item at tree/lake..
+    					Alert alert = new Alert(AlertType.ERROR);
+    		            alert.setTitle("Invalid Position");
+    		            alert.setHeaderText("Please re-position");
+    		            alert.showAndWait();
     				}
     			}
     		});
