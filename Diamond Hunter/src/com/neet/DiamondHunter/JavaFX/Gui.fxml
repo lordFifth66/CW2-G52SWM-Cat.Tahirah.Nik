@@ -73,12 +73,12 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="axebutton" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe's Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="axebutton" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="boatbutton" layoutX="5.0" layoutY="317.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Boat's Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="boatbutton" layoutX="5.0" layoutY="317.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
