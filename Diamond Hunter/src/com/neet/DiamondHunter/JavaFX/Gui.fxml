@@ -11,13 +11,13 @@
 
 <AnchorPane prefHeight="785.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.JavaFX.Controller">
    <children>
-      <SplitPane dividerPositions="0.7625570776255708" prefHeight="785.0" prefWidth="878.0">
+      <SplitPane dividerPositions="0.752283105022831" prefHeight="785.0" prefWidth="878.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <AnchorPane layoutX="18.0" layoutY="83.0" style="-fx-border-color: black;">
                      <children>
-                        <Canvas fx:id="canvas" height="640" layoutX="-2.0" style="border: 5px;" width="640.0" />
+                        <Canvas fx:id="canvas" height="628.0" layoutX="-6.0" style="border: 5px;" width="627.0" />
                      </children>
                   </AnchorPane>
                   <Text fill="WHITE" layoutX="8.0" layoutY="67.0" stroke="#433d3d" strokeDashOffset="5.0" strokeType="OUTSIDE" strokeWidth="2.0" text="Diamond Hunter Map" textAlignment="CENTER" wrappingWidth="586.0000032186508">
@@ -33,11 +33,6 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="782.0" prefWidth="275.0">
                <children>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe" wrappingWidth="104.65625">
-                     <font>
-                        <Font name="AvenirLTStd-Book" size="23.0" />
-                     </font>
-                  </Text>
                   <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
@@ -83,6 +78,11 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="itemStatus" layoutX="5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="179.0" text="Change Axe's Position" textAlignment="CENTER">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
         </items>
