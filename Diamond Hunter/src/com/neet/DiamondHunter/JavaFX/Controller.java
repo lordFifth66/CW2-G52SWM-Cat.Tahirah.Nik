@@ -134,9 +134,11 @@ public class Controller {
     				{
     					//warning if try to put item at tree/lake..
     					Alert alert = new Alert(AlertType.ERROR);
-    		            alert.setTitle("Invalid Position");
-    		            alert.setHeaderText("Please re-position");
-    		            alert.showAndWait();
+    					alert.setTitle("Error Message");
+    					alert.setHeaderText("Invalid Position!");
+    					alert.setContentText("Please re-position the object");
+    					
+    					alert.showAndWait();
     				}
     			}
     		});
