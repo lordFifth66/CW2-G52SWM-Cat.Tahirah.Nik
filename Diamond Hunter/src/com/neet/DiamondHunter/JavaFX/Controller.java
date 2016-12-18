@@ -134,9 +134,20 @@ public class Controller {
     				{
     					//warning if try to put item at tree/lake..
     					Alert alert = new Alert(AlertType.ERROR);
-    					alert.setTitle("Error Message");
-    					alert.setHeaderText("Invalid Position!");
-    					alert.setContentText("Please re-position the object");
+    					alert.setTitle("Error");
+    					
+    					
+    					if(itemStatus == 0)
+    					{
+    						alert.setHeaderText("Invalid Axe Location!");
+        					alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possbily reach them).  ");
+    					}
+    					
+    					else
+    					{
+    						alert.setHeaderText("Invalid Boat Location!");
+        					alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possbily reach them). ");
+    					}
     					
     					alert.showAndWait();
     				}
