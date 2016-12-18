@@ -14,6 +14,7 @@ public class FXMain extends Application{
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Gui.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("Map Viewer");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
