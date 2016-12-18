@@ -25,10 +25,10 @@
                         <Font name="NicknameDEMO" size="56.0" />
                      </font>
                   </Text>
-                  <Label layoutX="18.0" layoutY="734.0" text="X:" />
-                  <Label layoutX="38.0" layoutY="734.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
-                  <Label layoutX="63.0" layoutY="734.0" text="Y:" />
-                  <Label fx:id="yCoordinate" layoutX="83.0" layoutY="734.0" prefHeight="21.0" prefWidth="25.0" />
+                  <Label layoutX="18.0" layoutY="716.0" text="X:" />
+                  <Label layoutX="36.0" layoutY="714.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
+                  <Label layoutX="83.0" layoutY="716.0" text="Y:" />
+                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="714.0" prefHeight="21.0" prefWidth="25.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="782.0" prefWidth="275.0">
@@ -43,12 +43,12 @@
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="axeFieldX" layoutX="113.0" layoutY="210.0" prefHeight="10.0" prefWidth="74.0">
+                  <TextField fx:id="axeFieldX" editable="false" layoutX="113.0" layoutY="210.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="axeFieldY" layoutX="113.0" layoutY="254.0" prefHeight="10.0" prefWidth="74.0">
+                  <TextField fx:id="axeFieldY" editable="false" layoutX="113.0" layoutY="254.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
@@ -63,12 +63,12 @@
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="boatFieldX" layoutX="113.0" layoutY="365.0" prefHeight="10.0" prefWidth="74.0">
+                  <TextField fx:id="boatFieldX" editable="false" layoutX="113.0" layoutY="365.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="boatFieldY" layoutX="113.0" layoutY="409.0" prefHeight="10.0" prefWidth="74.0">
+                  <TextField fx:id="boatFieldY" editable="false" layoutX="113.0" layoutY="409.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
