@@ -81,10 +81,10 @@ public class Controller {
     	
     	draw(gc);
     	
-    	//axe if 0, else boat
+    	// default itemStatus
     	itemStatus = 2;
     	
-
+    	//axe if 0, else boat
     	axebutton.setOnAction((event) -> {
     		// Change Axe Position is clicked, itemStatus initialized to 0
     		itemStatus = 0;  
@@ -167,12 +167,14 @@ public class Controller {
     			Game.Run();    		
     		}
     	});
-    	
-    	Alert alert = new Alert(AlertType.INFORMATION);
-    	alert.setTitle("Diamond Hunter Map Viewer");
-    	alert.setHeaderText("afgadgdag");
-    	alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
-    	alert.showAndWait();
+    	if(itemStatus == 2)
+    	{
+    		Alert alert = new Alert(AlertType.INFORMATION);
+    		alert.setTitle("Diamond Hunter Map Viewer");
+    		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
+    		alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
+    		alert.showAndWait();
+    	}
     }
     
     //check the tile's type
