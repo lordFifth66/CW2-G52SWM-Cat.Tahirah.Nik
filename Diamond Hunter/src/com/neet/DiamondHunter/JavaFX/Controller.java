@@ -86,8 +86,10 @@ public class Controller {
     	
     	//axe if 0, else boat
     	axebutton.setOnAction((event) -> {
-    		// Change Axe Position is clicked, itemStatus initialized to 0
+    		// Change Axe Position if clicked, itemStatus initialized to 0
     		itemStatus = 0;  
+    		
+    		// set CSS style (background color) for axeFieldX, axeFieldY, boatFieldX, boatFieldY
     		axeFieldX.setStyle("-fx-background-color: tan");
     		axeFieldY.setStyle("-fx-background-color: tan");
     		boatFieldX.setStyle(null);
@@ -95,8 +97,10 @@ public class Controller {
     	});
     	
     	boatbutton.setOnAction((event) -> {
-    		// Change Boat Position is clicked, itemStatus initialized to 1
-    		itemStatus = 1; 
+    		// Change Boat Position if clicked, itemStatus initialized to 1
+    		itemStatus = 1;
+    		
+    		// set CSS style (background color) for axeFieldX, axeFieldY, boatFieldX, boatFieldY
     		boatFieldX.setStyle("-fx-background-color: tan");
     		boatFieldY.setStyle("-fx-background-color: tan");
     		axeFieldX.setStyle(null);
@@ -167,14 +171,11 @@ public class Controller {
     			Game.Run();    		
     		}
     	});
-    	if(itemStatus == 2)
-    	{
     		Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("Diamond Hunter Map Viewer");
     		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
     		alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
     		alert.showAndWait();
-    	}
     }
     
     //check the tile's type
