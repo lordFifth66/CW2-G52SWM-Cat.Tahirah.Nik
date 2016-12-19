@@ -183,11 +183,7 @@ public class Controller {
     			Game.Run();    		
     		}
     	});
-    		Alert alert = new Alert(AlertType.INFORMATION);
-    		alert.setTitle("Diamond Hunter Map Viewer");
-    		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
-    		alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
-    		alert.showAndWait();
+    		
     }
     
     //check the tile's type
