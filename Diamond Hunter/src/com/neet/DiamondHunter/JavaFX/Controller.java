@@ -14,7 +14,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -45,16 +44,16 @@ public class Controller {
     private Label yCoordinate;
     
     @FXML
-    private TextField axeFieldX;
+    private Label axeFieldX;
  
     @FXML 
-    private TextField axeFieldY;
+    private Label axeFieldY;
  
     @FXML
-    private TextField boatFieldX;
+    private Label boatFieldX;
 
     @FXML 
-    private TextField boatFieldY;
+    private Label boatFieldY;
 
     //create map
     private Map maps;
@@ -82,18 +81,29 @@ public class Controller {
     	
     	draw(gc);
     	
+    	//axe if 0, else boat
+    	itemStatus = 2;
+    	
+
     	axebutton.setOnAction((event) -> {
     		// Change Axe Position is clicked, itemStatus initialized to 0
-    		itemStatus=0;    
+    		itemStatus = 0;  
+    		axeFieldX.setStyle("-fx-background-color: tan");
+    		axeFieldY.setStyle("-fx-background-color: tan");
+    		boatFieldX.setStyle(null);
+    		boatFieldY.setStyle(null);
     	});
     	
     	boatbutton.setOnAction((event) -> {
     		// Change Boat Position is clicked, itemStatus initialized to 1
-    		itemStatus=1;    
+    		itemStatus = 1; 
+    		boatFieldX.setStyle("-fx-background-color: tan");
+    		boatFieldY.setStyle("-fx-background-color: tan");
+    		axeFieldX.setStyle(null);
+    		axeFieldY.setStyle(null);
     	});
     	
-    	//axe if 0, else boat
-    	itemStatus = 0;
+    	
     	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
@@ -157,6 +167,12 @@ public class Controller {
     			Game.Run();    		
     		}
     	});
+    	
+    	Alert alert = new Alert(AlertType.INFORMATION);
+    	alert.setTitle("Diamond Hunter Map Viewer");
+    	alert.setHeaderText("afgadgdag");
+    	alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
+    	alert.showAndWait();
     }
     
     //check the tile's type
