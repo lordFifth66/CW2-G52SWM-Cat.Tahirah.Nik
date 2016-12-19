@@ -82,11 +82,22 @@
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="runGame" layoutX="65.0" layoutY="665.0" mnemonicParsing="false" text="Launch Game">
+                  <Button fx:id="runGame" layoutX="36.0" layoutY="666.0" mnemonicParsing="false" text="Launch Game">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Button>
+                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="14.0" layoutY="476.0" prefHeight="131.0" prefWidth="170.0" />
+                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current: object" wrappingWidth="83.99999970197678">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="currObject" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="53.0" prefHeight="27.0" prefWidth="84.0"> 
+                  	<font>
+                    	    <Font name="AvenirLTStd-Book" size="18.0" />
+                    </font>
+                  </Label>
                </children>
             </AnchorPane>
         </items>

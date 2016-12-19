@@ -45,6 +45,12 @@ public class Controller {
     
     @FXML
     private Label axeFieldX;
+    
+    @FXML
+    private Label conWarning;
+    
+    @FXML
+    private Label currObject;
  
     @FXML 
     private Label axeFieldY;
@@ -83,6 +89,7 @@ public class Controller {
     	
     	// default itemStatus which is none
     	itemStatus = 2;
+    	currObject.setText("NONE");
     	
     	//axe if 0, else boat
     	
@@ -107,11 +114,13 @@ public class Controller {
     					{
     						Objects.axeX = (int)(mouseEvent.getX() / 16);
     						Objects.axeY = (int)(mouseEvent.getY() / 16);
+    						
     					}
     					else if(itemStatus == 1)
     					{
     						Objects.boatX = (int)(mouseEvent.getX() / 16);
     						Objects.boatY = (int)(mouseEvent.getY() / 16);
+    						
     					}
    						else
    						{
@@ -121,8 +130,13 @@ public class Controller {
     					if (!(checkAxe(Objects.axeX, Objects.axeY) &&
     							checkBoat(Objects.boatX, Objects.boatY)))
     					{
-    						System.out.println("warning");
-    					}  		
+    						//System.out.println("warning");
+    						conWarning.setText("Warning! \n afkjbdaskjgbgre");
+    					}
+    					else
+    					{
+    						conWarning.setText(null);
+    					}
     					
     					draw(gc);
     					
@@ -136,7 +150,9 @@ public class Controller {
     	
     	//change item status to axe
     	axebutton.setOnAction((event) -> {
-    		itemStatus = 0;  
+    		itemStatus = 0;
+    		
+    		currObject.setText("AXE");
     		
     		axeFieldX.setStyle("-fx-background-color: tan");
     		axeFieldY.setStyle("-fx-background-color: tan");
@@ -147,6 +163,8 @@ public class Controller {
     	//change item status to boat
     	boatbutton.setOnAction((event) -> {
     		itemStatus = 1;
+    		
+    		currObject.setText("BOAT");
     		
     		boatFieldX.setStyle("-fx-background-color: tan");
     		boatFieldY.setStyle("-fx-background-color: tan");
