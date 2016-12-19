@@ -24,10 +24,10 @@
                         <Font name="NicknameDEMO" size="56.0" />
                      </font>
                   </Text>
-                  <Label layoutX="18.0" layoutY="716.0" text="X:" />
-                  <Label layoutX="36.0" layoutY="714.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
-                  <Label layoutX="83.0" layoutY="716.0" text="Y:" />
-                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="714.0" prefHeight="21.0" prefWidth="25.0" />
+                  <Label layoutX="18.0" layoutY="728.0" text="X:" />
+                  <Label layoutX="36.0" layoutY="726.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
+                  <Label layoutX="83.0" layoutY="728.0" text="Y:" />
+                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="726.0" prefHeight="21.0" prefWidth="25.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="782.0" prefWidth="275.0">
