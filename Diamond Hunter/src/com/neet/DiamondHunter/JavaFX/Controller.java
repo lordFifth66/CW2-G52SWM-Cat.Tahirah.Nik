@@ -134,35 +134,24 @@ public class Controller {
     					else if(itemStatus == 1)
     					{
     						Objects.boatX = (int)(mouseEvent.getX() / 16);
-    						Objects.boatY = (int)(mouseEvent.getY() / 16);	
+    						Objects.boatY = (int)(mouseEvent.getY() / 16);
     					}
+   						else
+   						{
+       						warningSign();
+       					}
+    					
     					draw(gc);
     					
     					if (!(checkAxe(Objects.axeX, Objects.axeY) &&
     							checkBoat(Objects.boatX, Objects.boatY)))
     					{
     						System.out.println("warning");
-    					}
+    					}  					
     				}
     				else
     				{
-    					//warning if try to put item at tree/lake..
-    					Alert alert = new Alert(AlertType.ERROR);
-    					alert.setTitle("Error");
-    					
-    					if(itemStatus == 0)
-    					{
-    						alert.setHeaderText("Invalid Axe Location!");
-        					alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possbily reach them).  ");
-    					}
-    					
-    					else if(itemStatus == 1)
-    					{
-    						alert.setHeaderText("Invalid Boat Location!");
-        					alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possbily reach them). ");
-    					}
-    					
-    					alert.showAndWait();
+    					warningSign();
     				}
     			}
     		});
@@ -176,11 +165,7 @@ public class Controller {
     			Game.Run();    		
     		}
     	});
-    		Alert alert = new Alert(AlertType.INFORMATION);
-    		alert.setTitle("Diamond Hunter Map Viewer");
-    		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
-    		alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
-    		alert.showAndWait();
+    		
     }
     
     //check the tile's type
@@ -204,6 +189,34 @@ public class Controller {
 	    boatFieldY.setText(Integer.toString(Objects.boatY));
 	 
     }
+    
+    private void warningSign()
+    {
+    	Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Error");
+		
+		if(itemStatus == 0)
+		{
+			alert.setHeaderText("Invalid Axe Location!");
+			alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possbily reach them).  ");
+		}
+		
+		else if(itemStatus == 1)
+		{
+			alert.setHeaderText("Invalid Boat Location!");
+			alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possbily reach them). ");
+		}
+		
+		else
+		{
+			alert.setHeaderText("No item is chosen");
+			alert.setContentText("Please choose one item to change its position in map.");
+				
+		}
+		
+		alert.showAndWait();
+    }
+    
     private boolean checkAxe(int x, int y)
     {
     	if (y > 31) return false;
