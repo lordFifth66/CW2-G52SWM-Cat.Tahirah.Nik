@@ -133,9 +133,21 @@ public class Controller {
     					}
     					else
     					{
-    						Objects.boatX = (int)(mouseEvent.getX() / 16);
-    						Objects.boatY = (int)(mouseEvent.getY() / 16);	
+    						if (itemStatus == 1)
+    						{
+    							Objects.boatX = (int)(mouseEvent.getX() / 16);
+    							Objects.boatY = (int)(mouseEvent.getY() / 16);	
+    						}
+    						else
+    						{
+        						Alert alert = new Alert(AlertType.WARNING);
+            					alert.setTitle("Warning");
+            					alert.setHeaderText("No item is chosen");
+            					alert.setContentText("Please choose one item to change its position in map.");
+            					alert.showAndWait();
+        					}
     					}
+    					
     					draw(gc);    					
     				}
     				else
