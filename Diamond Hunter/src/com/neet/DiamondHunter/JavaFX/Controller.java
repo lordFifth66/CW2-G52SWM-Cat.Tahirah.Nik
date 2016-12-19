@@ -81,33 +81,10 @@ public class Controller {
     	
     	draw(gc);
     	
-    	// default itemStatus
+    	// default itemStatus which is none
     	itemStatus = 2;
     	
     	//axe if 0, else boat
-    	axebutton.setOnAction((event) -> {
-    		// Change Axe Position if clicked, itemStatus initialized to 0
-    		itemStatus = 0;  
-    		
-    		// set CSS style (background color) for axeFieldX, axeFieldY, boatFieldX, boatFieldY
-    		axeFieldX.setStyle("-fx-background-color: tan");
-    		axeFieldY.setStyle("-fx-background-color: tan");
-    		boatFieldX.setStyle(null);
-    		boatFieldY.setStyle(null);
-    	});
-    	
-    	boatbutton.setOnAction((event) -> {
-    		// Change Boat Position if clicked, itemStatus initialized to 1
-    		itemStatus = 1;
-    		
-    		// set CSS style (background color) for axeFieldX, axeFieldY, boatFieldX, boatFieldY
-    		boatFieldX.setStyle("-fx-background-color: tan");
-    		boatFieldY.setStyle("-fx-background-color: tan");
-    		axeFieldX.setStyle(null);
-    		axeFieldY.setStyle(null);
-    	});
-    	
-    	
     	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
@@ -141,13 +118,14 @@ public class Controller {
        						warningSign();
        					}
     					
-    					draw(gc);
-    					
     					if (!(checkAxe(Objects.axeX, Objects.axeY) &&
     							checkBoat(Objects.boatX, Objects.boatY)))
     					{
     						System.out.println("warning");
-    					}  					
+    					}  		
+    					
+    					draw(gc);
+    					
     				}
     				else
     				{
@@ -156,14 +134,30 @@ public class Controller {
     			}
     		});
     	
+    	//change item status to axe
+    	axebutton.setOnAction((event) -> {
+    		itemStatus = 0;  
+    		
+    		axeFieldX.setStyle("-fx-background-color: tan");
+    		axeFieldY.setStyle("-fx-background-color: tan");
+    		boatFieldX.setStyle(null);
+    		boatFieldY.setStyle(null);
+    	});
+    	
+    	//change item status to boat
+    	boatbutton.setOnAction((event) -> {
+    		itemStatus = 1;
+    		
+    		boatFieldX.setStyle("-fx-background-color: tan");
+    		boatFieldY.setStyle("-fx-background-color: tan");
+    		axeFieldX.setStyle(null);
+    		axeFieldY.setStyle(null);
+    	});
+    	
     	runGame.setOnAction((event) -> {
-    		if (checkTiles(Objects.axeX, Objects.axeY) && 
-    				checkTiles(Objects.boatX, Objects.boatY))
-    		{
     			Stage currentStage = (Stage)runGame.getScene().getWindow();
     			currentStage.close();
     			Game.Run();    		
-    		}
     	});
     		
     }

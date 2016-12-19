@@ -82,7 +82,7 @@
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="runGame" layoutX="80.0" layoutY="657.0" mnemonicParsing="false" text="Confirm">
+                  <Button fx:id="runGame" layoutX="80.0" layoutY="657.0" mnemonicParsing="false" text="Launch Game">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
