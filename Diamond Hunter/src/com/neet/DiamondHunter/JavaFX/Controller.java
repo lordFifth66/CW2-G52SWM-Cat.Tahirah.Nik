@@ -85,8 +85,8 @@ public class Controller {
     	items = new Objects(16);
     	items.loadItem();
 
-    	conWarning.setGraphic(items.getAxe(50));
-    	conWarning.setGraphic(items.getBoat(50));
+    	conWarning.setGraphic(items.getAxe(30));
+    	runGame.setGraphic(items.getAxe(30));
     	draw(gc);
     	
     	// default itemStatus which is none
