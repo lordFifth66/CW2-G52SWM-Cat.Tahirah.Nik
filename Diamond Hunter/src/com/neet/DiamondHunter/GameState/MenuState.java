@@ -5,7 +5,7 @@ package com.neet.DiamondHunter.GameState;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import com.neet.DiamondHunter.JavaFX.FXMain;
+//import com.neet.DiamondHunter.JavaFX.FXMain;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
