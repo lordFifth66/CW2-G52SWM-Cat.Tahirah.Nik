@@ -1,2 +1,9 @@
-/bin/
+/bin/com
+/bin/HUD
+/bin/Logo
+/bin/Maps
+/bin/Music
+/bin/SFX
+/bin/Sprites
+/bin/Tilesets
 *.class
