@@ -91,8 +91,6 @@ public class Controller {
     	itemStatus = 2;
     	currObject.setText("NONE");
     	
-    	//axe if 0, else boat
-    	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
@@ -130,8 +128,9 @@ public class Controller {
     					if (!(checkAxe(Objects.axeX, Objects.axeY) &&
     							checkBoat(Objects.boatX, Objects.boatY)))
     					{
-    						//System.out.println("warning");
-    						conWarning.setText("Warning! \n afkjbdaskjgbgre");
+    						conWarning.setText("Warning! \nThere is a possibility\nthat the game"
+    								+ " will never \nend!!");
+    						conWarning.setStyle("-fx-text-fill: red");
     					}
     					else
     					{

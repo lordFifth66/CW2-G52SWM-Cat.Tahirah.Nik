@@ -32,6 +32,21 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="782.0" prefWidth="275.0" style="border: 5px;">
                <children>
+                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current object" wrappingWidth="73.99999797344208">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="19.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="currObject" alignment="CENTER" contentDisplay="CENTER" layoutX="106.0" layoutY="67.0" prefHeight="27.0" prefWidth="84.0"> 
+                  	<font>
+                    	    <Font name="AvenirLTStd-Book" size="18.0" />
+                    </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="64.0" text=":">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
                   <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
@@ -52,6 +67,11 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
+                  <Button fx:id="axebutton" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="17.0" />
+                     </font>
+                  </Button>
                   <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
@@ -72,32 +92,17 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="axebutton" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
-                     <font>
-                        <Font name="AvenirLTStd-Book" size="17.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="boatbutton" layoutX="5.0" layoutY="317.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
+                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="561.0" prefHeight="98.0" prefWidth="170.0" />
                   <Button fx:id="runGame" layoutX="36.0" layoutY="666.0" mnemonicParsing="false" text="Launch Game">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Button>
-                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="14.0" layoutY="476.0" prefHeight="131.0" prefWidth="170.0" />
-                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current: object" wrappingWidth="83.99999970197678">
-                     <font>
-                        <Font name="AvenirLTStd-Book" size="19.0" />
-                     </font>
-                  </Text>
-                  <Label fx:id="currObject" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="53.0" prefHeight="27.0" prefWidth="84.0"> 
-                  	<font>
-                    	    <Font name="AvenirLTStd-Book" size="18.0" />
-                    </font>
-                  </Label>
                </children>
             </AnchorPane>
         </items>

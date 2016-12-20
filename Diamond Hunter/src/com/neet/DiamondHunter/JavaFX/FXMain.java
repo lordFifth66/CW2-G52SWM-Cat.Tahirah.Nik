@@ -23,7 +23,7 @@ public class FXMain extends Application{
 			Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("Diamond Hunter Map Viewer");
     		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
-    		alert.setContentText("afasafasfdasgsfgfdsgdfgsf");
+    		alert.setContentText("Choose an item and click at the map to change their location");
     		alert.showAndWait();
     		
 		} catch(Exception e) {
