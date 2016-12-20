@@ -2,6 +2,7 @@ package com.neet.DiamondHunter.JavaFX;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 
 public class Objects {
@@ -50,5 +51,23 @@ public class Objects {
 
 		gc.drawImage(axe, axeX * 16, axeY * 16);
 		gc.drawImage(boat, boatX * 16, boatY * 16);
+	}
+	
+	public ImageView getAxe(int size)
+	{
+		ImageView axeImage = new ImageView(axe);
+		axeImage.setFitHeight(size);
+		axeImage.setFitWidth(size);
+		
+		return axeImage;
+	}
+	
+	public ImageView getBoat(int size)
+	{
+		ImageView boatImage = new ImageView(boat);
+		boatImage.setFitHeight(size);
+		boatImage.setFitWidth(size);
+		
+		return boatImage;
 	}
 }
