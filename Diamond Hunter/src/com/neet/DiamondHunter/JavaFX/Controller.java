@@ -92,7 +92,7 @@ public class Controller {
     	
     	// default itemStatus which is none
     	itemStatus = 2;
-    	currObject.setText("NONE");
+    	currObject.setText("");
     	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
@@ -153,8 +153,8 @@ public class Controller {
     	//change item status to axe
     	axebutton.setOnAction((event) -> {
     		itemStatus = 0;
+    		currObject.setGraphic(items.getAxe(30));
     		
-    		currObject.setText("AXE");
     		
     		axeFieldX.setStyle("-fx-background-color: tan");
     		axeFieldY.setStyle("-fx-background-color: tan");
