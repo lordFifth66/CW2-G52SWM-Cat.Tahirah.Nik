@@ -1,4 +1,4 @@
-package com.neet.DiamondHunter.JavaFX;
+/*package com.neet.DiamondHunter.JavaFX;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -34,4 +34,4 @@ public class FXMain extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
-}
+}*/
