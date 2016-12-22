@@ -84,6 +84,8 @@ public class Controller {
     	//load item
     	items = new Objects(16);
     	items.loadItem();
+    	
+    	axebutton.setGraphic(items.getAxe(15));
 
     	draw(gc);
     	
