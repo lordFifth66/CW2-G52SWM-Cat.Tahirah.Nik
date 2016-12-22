@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,7 +17,7 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <AnchorPane layoutX="18.0" layoutY="83.0">
+                  <AnchorPane id="inner" layoutX="18.0" layoutY="83.0" stylesheets="@style.css">
                      <children>
                         <Canvas fx:id="canvas" height="640.0" layoutX="-10.0" layoutY="-6.0" width="640.0" />
                      </children>
@@ -32,7 +33,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="308.0" style="border: 5px;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="240.0" style="border: 5px;">
                <children>
                   <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current object" wrappingWidth="73.99999797344208">
                      <font>
@@ -69,10 +70,17 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="axebutton" layoutX="4.0" layoutY="235.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="axebutton" layoutX="7.0" layoutY="235.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
+                     <tooltip>
+                        <Tooltip text="Click this button to change axe's position">
+                           <font>
+                              <Font name="AvenirLTStd-Book" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
@@ -94,19 +102,33 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="boatbutton" layoutX="4.0" layoutY="462.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="boatbutton" layoutX="7.0" layoutY="462.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
+                     <tooltip>
+                        <Tooltip text="Click this button to change boat's position">
+                           <font>
+                              <Font name="AvenirLTStd-Book" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="595.0" prefHeight="83.0" prefWidth="195.0" textFill="#ff2222">
                      <font>
                         <Font name="AvenirLTStd-Book" size="15.0" />
                      </font></Label>
-                  <Button fx:id="runGame" layoutX="39.0" layoutY="689.0" mnemonicParsing="false" text="Launch Game">
+                  <Button fx:id="runGame" layoutX="39.0" layoutY="689.0" mnemonicParsing="false" text="Launch Game" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
+                     <tooltip>
+                        <Tooltip text="Click this button to launch Diamond Hunter Game">
+                           <font>
+                              <Font name="AvenirLTStd-Book" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
                   </Button>
                   <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
                      <image>
