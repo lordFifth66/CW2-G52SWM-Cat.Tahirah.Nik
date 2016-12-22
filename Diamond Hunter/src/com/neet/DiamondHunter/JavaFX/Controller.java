@@ -165,8 +165,7 @@ public class Controller {
     	//change item status to boat
     	boatbutton.setOnAction((event) -> {
     		itemStatus = 1;
-    		
-    		currObject.setText("BOAT");
+    		currObject.setGraphic(items.getBoat(30));
     		
     		boatFieldX.setStyle("-fx-background-color: tan");
     		boatFieldY.setStyle("-fx-background-color: tan");
