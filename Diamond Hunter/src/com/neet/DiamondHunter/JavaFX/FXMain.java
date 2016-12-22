@@ -15,6 +15,8 @@ public class FXMain extends Application{
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Gui.fxml"));
 			Scene scene = new Scene(root);
+			
+			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Map Viewer");
 			primaryStage.setResizable(false);
@@ -23,7 +25,7 @@ public class FXMain extends Application{
 			Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("Diamond Hunter Map Viewer");
     		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
-    		alert.setContentText("Choose an item and click at the map to change their location");
+    		alert.setContentText("Choose an item - Axe or Boat\nClick on the map to change their positions");
     		alert.showAndWait();
     		
 		} catch(Exception e) {
