@@ -109,7 +109,7 @@ public class defLaunch extends Application
         stage.show();
 	}
 	
-	public void launchGame()
+	public static void launchGame()
 	{
 		JFrame window = new JFrame("Diamond Hunter");
 		

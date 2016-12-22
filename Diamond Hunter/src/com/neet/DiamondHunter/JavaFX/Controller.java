@@ -8,7 +8,7 @@ import javafx.scene.control.Alert.AlertType;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.neet.DiamondHunter.Main.Game;
+import com.neet.DiamondHunter.Main.defLaunch;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -174,7 +174,7 @@ public class Controller {
     	runGame.setOnAction((event) -> {
     			Stage currentStage = (Stage)runGame.getScene().getWindow();
     			currentStage.close();
-    			Game.Run();    		
+    			defLaunch.launchGame();    		
     	});
     		
     }
