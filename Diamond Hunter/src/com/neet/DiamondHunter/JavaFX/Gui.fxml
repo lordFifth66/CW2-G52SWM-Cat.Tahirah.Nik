@@ -22,9 +22,9 @@
                      </children>
                   </AnchorPane>
                   <Label layoutX="18.0" layoutY="724.0" text="X:" />
-                  <Label layoutX="36.0" layoutY="723.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
+                  <Label layoutX="36.0" layoutY="725.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
                   <Label layoutX="83.0" layoutY="724.0" text="Y:" />
-                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="723.0" prefHeight="21.0" prefWidth="25.0" />
+                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="725.0" prefHeight="21.0" prefWidth="25.0" />
                   <ImageView fitHeight="69.0" fitWidth="594.0" layoutX="91.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/Logo/title.png" />
