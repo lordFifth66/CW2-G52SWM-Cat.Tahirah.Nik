@@ -25,9 +25,8 @@ public class Map {
 	private Image[][] tiles;
 	
 	
-	public Map(int tileSize)
+	public Map()
 	{
-		this.tileSize = tileSize;
 		oriTileSize = 16;
 	}
 
@@ -40,26 +39,26 @@ public class Map {
 		tiles = new Image[2][numTilesAcross];
 		
 		for(int col = 0; col < numTilesAcross; col++) {
-			
 			tiles[0][col] = new WritableImage(tilesSet.getPixelReader(),
 					col * oriTileSize,
 					0,
-					tileSize,
-					tileSize
+					oriTileSize,
+					oriTileSize
 					);
 			
 			tiles[1][col] =new WritableImage(tilesSet.getPixelReader(),
 					col * oriTileSize,
 					oriTileSize,
-					tileSize,
-					tileSize
+					oriTileSize,
+					oriTileSize
 					);
 		}
     }
 	
 	//load the position for all tiles based on testmap.map
-	public void loadMap()
+	public void loadMap(int tileSize)
     {
+		this.tileSize = tileSize;
     	try
     	{
     		InputStream in = getClass().getResourceAsStream("/Maps/testmap.map");
@@ -105,7 +104,9 @@ public class Map {
 				gc.drawImage(
 					tiles[r][c],
 					col * tileSize,
-					row * tileSize
+					row * tileSize,
+					tileSize,
+					tileSize
 				);	
 			}	
 		}	

@@ -5,6 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
+import java.awt.event.MouseWheelEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -70,6 +71,8 @@ public class Controller {
     
     //item coordinate
     private int itemStatus;
+    
+    private int mapItemSize;
 
 
     @FXML
@@ -77,29 +80,29 @@ public class Controller {
     	
     	GraphicsContext gc = canvas.getGraphicsContext2D();
     	//load map
-    	maps = new Map(16);
-    	maps.loadMap();
-    	maps.draw(gc);
+    	mapItemSize = 16;
+    	
+    	maps = new Map();
+    	maps.loadMap(mapItemSize);
     	
     	//load item
-    	items = new Objects(16);
-    	items.loadItem();
+    	items = new Objects();
+    	items.loadItem(mapItemSize);
     	
     	axebutton.setGraphic(items.getAxe(15));
     	boatbutton.setGraphic(items.getBoat(15));
     	
     	draw(gc);
-    	
+
     	// default itemStatus which is none
     	itemStatus = 2;
     	currObject.setText("NONE");
-    	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
     		public void handle (MouseEvent mouseEvent) {
     				
-    				xlocation = (int) (mouseEvent.getX() / 16);
-    				ylocation = (int) (mouseEvent.getY() / 16);
+    				xlocation = (int) (mouseEvent.getX() / mapItemSize);
+    				ylocation = (int) (mouseEvent.getY() / mapItemSize);
     				xCoordinate.setText(Integer.toString(xlocation));
     				yCoordinate.setText(Integer.toString(ylocation));
     			}
@@ -113,14 +116,14 @@ public class Controller {
     				{	
     					if (itemStatus == 0)
     					{
-    						Objects.axeX = (int)(mouseEvent.getX() / 16);
-    						Objects.axeY = (int)(mouseEvent.getY() / 16);
+    						Objects.axeX = (int)(mouseEvent.getX() / mapItemSize);
+    						Objects.axeY = (int)(mouseEvent.getY() / mapItemSize);
     						
     					}
     					else if(itemStatus == 1)
     					{
-    						Objects.boatX = (int)(mouseEvent.getX() / 16);
-    						Objects.boatY = (int)(mouseEvent.getY() / 16);
+    						Objects.boatX = (int)(mouseEvent.getX() / mapItemSize);
+    						Objects.boatY = (int)(mouseEvent.getY() / mapItemSize);
     						
     					}
    						else
@@ -150,6 +153,19 @@ public class Controller {
     			}
     		});
     	
+    	canvas.setOnScroll((event) -> {
+    	     System.out.println(event.getDeltaY());
+    	     if(event.getDeltaY() == 40)
+    	    	 mapItemSize++;
+    	     else
+    	     {
+    	    	 if (mapItemSize > 16)
+    	    	 mapItemSize--;
+    	     }
+	     	 maps.loadMap(mapItemSize);
+	     	items.loadItem(mapItemSize);
+	     	 draw(gc);
+    	});
     	//change item status to axe
     	axebutton.setOnAction((event) -> {
     		itemStatus = 0;
@@ -190,6 +206,7 @@ public class Controller {
     	else
     		return false;    		
     }
+    
     
     //draw the map
     private void draw(GraphicsContext gc)

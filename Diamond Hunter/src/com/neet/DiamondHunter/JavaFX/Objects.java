@@ -17,11 +17,11 @@ public class Objects {
     public static int boatY;
     
 	private int itemSize;
+	private int oriItemSize;
 	
-	public Objects(int itemSize)
+	public Objects()
 	{
-		this.itemSize = itemSize;
-		
+		oriItemSize = 16;
 		axeX = 37;
     	axeY = 26;
     	boatX = 4;
@@ -29,28 +29,28 @@ public class Objects {
 	}
 	
 
-	public void loadItem()
+	public void loadItem(int itemSize)
 	{
+		this.itemSize = itemSize;
 		Image itemList = new Image("/Sprites/items.gif");
 		axe = new WritableImage(itemList.getPixelReader(),
-				itemSize,
-				itemSize,
-				itemSize,
-				itemSize
+				oriItemSize,
+				oriItemSize,
+				oriItemSize,
+				oriItemSize
 				);
 		boat = new WritableImage(itemList.getPixelReader(),
 				0,
-				itemSize,
-				itemSize,
-				itemSize
+				oriItemSize,
+				oriItemSize,
+				oriItemSize
 				); 
 	}
 	
 	public void draw(GraphicsContext gc)
 	{
-
-		gc.drawImage(axe, axeX * 16, axeY * 16);
-		gc.drawImage(boat, boatX * 16, boatY * 16);
+		gc.drawImage(axe, axeX * itemSize, axeY * itemSize, itemSize, itemSize);
+		gc.drawImage(boat, boatX * itemSize, boatY * itemSize, itemSize, itemSize);
 	}
 	
 	public ImageView getAxe(int size)
