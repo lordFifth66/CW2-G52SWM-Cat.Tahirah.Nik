@@ -6,15 +6,15 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+
 import javafx.stage.Stage;
 //import javax.swing.*;
 
@@ -65,51 +65,35 @@ public class defLaunch extends Application
 		
 		btn2.setOnAction(e-> launchGame());
 		
-		hb = new HBox(btn1, btn2);
-		hb.setSpacing(100);
+		hb = new HBox();
+		hb.getChildren().addAll(btn1, btn2);
+		hb.setSpacing(70);
 	    hb.setPadding(new Insets(20));
+	    hb.setAlignment(Pos.CENTER);
 		
 		mainPane = new BorderPane();
 		
 		mainPane.setTop(launchLabel);
 		mainPane.setBottom(hb);
-		
-		BorderPane.setAlignment(launchLabel, Pos.TOP_CENTER );
-		BorderPane.setAlignment(hb, Pos.CENTER );
-		
-		
-		
 		mainPane.setStyle("-fx-background-color: gray;-fx-padding: 20px;");
 		
-	     //make pane
-	     /*fp1 = new FlowPane();
-	     
-	     HBox hb1 = new HBox(btn1, btn2);
-	     hb1.setSpacing(10);
-	     hb1.setPadding(new Insets(20));
-	     
-	     //set background color of each Pane
-	     fp1.setStyle("-fx-background-color: gray;-fx-padding: 10px;");
-	     
-	     fp1.getChildren().add(launchLabel);
-	     fp1.getChildren().add(hb1);
-	     
-	     
-	     launchScene = new Scene(fp1, 450, 200);*/
+		BorderPane.setAlignment(launchLabel, Pos.TOP_CENTER );
 		
-		 launchScene = new Scene(mainPane, 450, 200);
+		
+		
+		launchScene = new Scene(mainPane, 450, 150);
 	     
-	     primaryStage.setTitle("Hello World!");
-	     primaryStage.setScene(launchScene);
-	     primaryStage.setResizable(false);
-	     primaryStage.show();
+	    primaryStage.setTitle("Diamond Hunter Launcher");
+	    primaryStage.setScene(launchScene);
+	    primaryStage.setResizable(false);
+	    primaryStage.show();
 				
 		
 	}
 	
 	public void mapViewer() throws Exception
 	{
-		Parent root = FXMLLoader.load(getClass().getResource("../JavaFX/Gui.fxml"));
+		AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("../JavaFX/Gui.fxml"));
         stage.setTitle("Map Viewer");
         Scene scene = new Scene(root,878,751);
         stage.setScene(scene);
