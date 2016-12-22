@@ -173,6 +173,7 @@ public class Controller {
     		axeFieldY.setStyle(null);
     	});
     	
+    	//tu run Diamond Game 
     	runGame.setOnAction((event) -> {
     			Stage currentStage = (Stage)runGame.getScene().getWindow();
     			currentStage.close();
@@ -203,6 +204,7 @@ public class Controller {
 	 
     }
     
+    //warning dialog box if items' locations are invalid and when no item is chosen
     private void warningSign()
     {
     	Alert alert = new Alert(AlertType.ERROR);
@@ -230,6 +232,7 @@ public class Controller {
 		alert.showAndWait();
     }
     
+    //to check valid axe location
     private boolean checkAxe(int x, int y)
     {
     	if (y > 31) return false;
@@ -246,6 +249,7 @@ public class Controller {
     	}
     	return true;
     }
+    //to check valid boat location 
     private boolean checkBoat(int x, int y)
     {
     	if (y < 8)

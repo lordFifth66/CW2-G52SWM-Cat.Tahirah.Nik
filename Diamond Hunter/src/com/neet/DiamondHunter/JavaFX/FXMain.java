@@ -15,13 +15,14 @@ public class FXMain extends Application{
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Gui.fxml"));
 			Scene scene = new Scene(root);
-			
+			//load css file
 			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Map Viewer");
 			primaryStage.setResizable(false);
 			primaryStage.show();
 			
+			//Welcome alert dialog box and instructions how to use the map
 			Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("Diamond Hunter Map Viewer");
     		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");

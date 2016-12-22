@@ -53,6 +53,7 @@ public class Objects {
 		gc.drawImage(boat, boatX * 16, boatY * 16);
 	}
 	
+	//to get image of axe
 	public ImageView getAxe(int size)
 	{
 		ImageView axeImage = new ImageView(axe);
@@ -62,6 +63,7 @@ public class Objects {
 		return axeImage;
 	}
 	
+	//to get image of boat
 	public ImageView getBoat(int size)
 	{
 		ImageView boatImage = new ImageView(boat);
