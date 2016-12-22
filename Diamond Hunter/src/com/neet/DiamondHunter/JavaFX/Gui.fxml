@@ -103,15 +103,18 @@
                      <font>
                         <Font name="AvenirLTStd-Book" size="15.0" />
                      </font></Label>
-                  <Button fx:id="runGame" layoutX="36.0" layoutY="689.0" mnemonicParsing="false" text="Launch Game">
+                  <Button fx:id="runGame" layoutX="39.0" layoutY="689.0" mnemonicParsing="false" text="Launch Game">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="38.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/Logo/boatt.png" />
+                     </image></ImageView>
                   <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Resources/Logo/axee.png" />
+                        <Image url="/Logo/axee.png" />
                      </image>
                   </ImageView>
                </children>
