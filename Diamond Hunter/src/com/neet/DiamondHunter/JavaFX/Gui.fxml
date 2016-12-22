@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="751.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.JavaFX.Controller">
+<AnchorPane prefHeight="751.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.JavaFX.Controller">
    <children>
-      <SplitPane dividerPositions="0.752283105022831" prefHeight="750.0" prefWidth="878.0">
+      <SplitPane dividerPositions="0.7446808510638298" prefHeight="750.0" prefWidth="895.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -22,9 +22,9 @@
                      </children>
                   </AnchorPane>
                   <Label layoutX="18.0" layoutY="724.0" text="X:" />
-                  <Label layoutX="36.0" layoutY="722.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
+                  <Label layoutX="36.0" layoutY="723.0" prefHeight="21.0" prefWidth="25.0" fx:id="xCoordinate" />
                   <Label layoutX="83.0" layoutY="724.0" text="Y:" />
-                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="722.0" prefHeight="21.0" prefWidth="25.0" />
+                  <Label fx:id="yCoordinate" layoutX="103.0" layoutY="723.0" prefHeight="21.0" prefWidth="25.0" />
                   <ImageView fitHeight="69.0" fitWidth="594.0" layoutX="91.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/Logo/title.png" />
@@ -32,7 +32,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="782.0" prefWidth="275.0" style="border: 5px;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="308.0" style="border: 5px;">
                <children>
                   <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current object" wrappingWidth="73.99999797344208">
                      <font>
@@ -69,7 +69,7 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="axebutton" layoutX="5.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="axebutton" layoutX="4.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
@@ -94,7 +94,7 @@
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="boatbutton" layoutX="5.0" layoutY="317.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="202.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="boatbutton" layoutX="4.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
@@ -105,11 +105,6 @@
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/Logo/sailboat.jpg" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
         </items>
