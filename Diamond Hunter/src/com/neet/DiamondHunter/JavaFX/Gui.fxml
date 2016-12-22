@@ -49,62 +49,71 @@
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Label fx:id="axeFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="215.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="axeFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="289.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="axeFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="260.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="axeFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="334.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="axebutton" layoutX="4.0" layoutY="161.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="axebutton" layoutX="4.0" layoutY="235.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Label fx:id="boatFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="370.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="boatFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="514.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="boatFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="415.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="boatFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="559.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="boatbutton" layoutX="4.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
+                  <Button fx:id="boatbutton" layoutX="4.0" layoutY="462.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
                   </Button>
-                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="561.0" prefHeight="98.0" prefWidth="170.0" />
-                  <Button fx:id="runGame" layoutX="36.0" layoutY="666.0" mnemonicParsing="false" text="Launch Game">
+                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="595.0" prefHeight="83.0" prefWidth="195.0" textFill="#ff2222">
+                     <font>
+                        <Font name="AvenirLTStd-Book" size="15.0" />
+                     </font></Label>
+                  <Button fx:id="runGame" layoutX="36.0" layoutY="689.0" mnemonicParsing="false" text="Launch Game">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="38.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Resources/Logo/axee.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
         </items>
