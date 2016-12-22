@@ -86,7 +86,8 @@ public class Controller {
     	items.loadItem();
     	
     	axebutton.setGraphic(items.getAxe(15));
-
+    	boatbutton.setGraphic(items.getBoat(15));
+    	
     	draw(gc);
     	
     	// default itemStatus which is none
