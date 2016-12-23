@@ -230,13 +230,17 @@ public class Controller {
 		if(itemStatus == 0)
 		{
 			alert.setHeaderText("Invalid Axe Location!");
-			alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possibly reach them).  ");
+			alert.setContentText("The valid location for AXE is neither on any "
+					+ "tree-like tile nor any blue-coloured tile "
+					+ "(Make sure to position the AXE where you can possibly reach them).");
 		}
 		
 		else if(itemStatus == 1)
 		{
 			alert.setHeaderText("Invalid Boat Location!");
-			alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possibly reach them). ");
+			alert.setContentText("The valid location for BOAT is neither on any"
+					+ " tree-like tile nor any blue-coloured tile "
+					+ "(Make sure to position the BOAT where you can possibly reach them).");
 		}
 		
 		else
