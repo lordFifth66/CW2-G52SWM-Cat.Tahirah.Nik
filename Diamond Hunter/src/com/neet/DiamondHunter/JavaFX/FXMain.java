@@ -39,7 +39,7 @@ public class FXMain extends Application{
 			Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("Diamond Hunter Map Viewer");
     		alert.setHeaderText("Welcome to Diamond Hunter Map Viewer!");
-    		alert.setContentText("Choose an item - Axe or Boat\nClick on the map to change their positions.\n\nWarning sign may appear if the position clicked leads to\npossibility that you might not be able to finish the game");
+    		alert.setContentText("Choose an item - Axe or Boat\nClick on the map to change their positions.\n\nWarning sign may appear if the position clicked leads to the\npossibility that you might not be able to finish the game.");
     		alert.showAndWait();
     		
 		} catch(Exception e) {
