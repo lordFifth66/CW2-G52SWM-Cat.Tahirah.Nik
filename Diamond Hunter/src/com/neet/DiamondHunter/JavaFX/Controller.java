@@ -151,7 +151,7 @@ public class Controller {
     			}
     		});
     	
-    	//zoom in and out the map(incomplete)
+    	//zoom in and out the map
     	canvas.setOnScroll((event) -> {
     	     if(event.getDeltaY() == 40)
     	    	 mapItemSize++;
