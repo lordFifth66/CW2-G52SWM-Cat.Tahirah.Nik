@@ -92,7 +92,7 @@ public class Controller {
     	
     	// default itemStatus which is none
     	itemStatus = 2;
-    	currObject.setText("");
+    	currObject.setText("NONE");
     	
     	//get x and y coordinate when mouse hover on the map
     	canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
@@ -153,6 +153,7 @@ public class Controller {
     	//change item status to axe
     	axebutton.setOnAction((event) -> {
     		itemStatus = 0;
+    		currObject.setText("");
     		currObject.setGraphic(items.getAxe(30));
     		
     		
@@ -165,6 +166,7 @@ public class Controller {
     	//change item status to boat
     	boatbutton.setOnAction((event) -> {
     		itemStatus = 1;
+    		currObject.setText("");
     		currObject.setGraphic(items.getBoat(30));
     		
     		boatFieldX.setStyle("-fx-background-color: tan");
@@ -173,7 +175,7 @@ public class Controller {
     		axeFieldY.setStyle(null);
     	});
     	
-    	//tu run Diamond Game 
+    	//to run Diamond Game 
     	runGame.setOnAction((event) -> {
     			Stage currentStage = (Stage)runGame.getScene().getWindow();
     			currentStage.close();
@@ -191,7 +193,7 @@ public class Controller {
     		return false;    		
     }
     
-    //draw the map
+    //draw the map and item
     private void draw(GraphicsContext gc)
     {
 		maps.draw(gc);
@@ -213,13 +215,13 @@ public class Controller {
 		if(itemStatus == 0)
 		{
 			alert.setHeaderText("Invalid Axe Location!");
-			alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possbily reach them).  ");
+			alert.setContentText("The valid location for AXE is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the AXE where you can possibly reach them).  ");
 		}
 		
 		else if(itemStatus == 1)
 		{
 			alert.setHeaderText("Invalid Boat Location!");
-			alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possbily reach them). ");
+			alert.setContentText("The valid location for BOAT is neither on any tree-like tile nor any blue-coloured tile (Make sure to position the BOAT where you can possibly reach them). ");
 		}
 		
 		else

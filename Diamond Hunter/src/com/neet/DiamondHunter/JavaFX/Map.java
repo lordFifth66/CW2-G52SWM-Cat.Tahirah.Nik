@@ -36,7 +36,6 @@ public class Map {
     {
         Image tilesSet = new Image("/Tilesets/testtileset.gif");
         numTilesAcross = (int) (tilesSet.getWidth() / oriTileSize);
-        System.out.println(tilesSet.getWidth());
 		tiles = new Image[2][numTilesAcross];
 		
 		for(int col = 0; col < numTilesAcross; col++) {

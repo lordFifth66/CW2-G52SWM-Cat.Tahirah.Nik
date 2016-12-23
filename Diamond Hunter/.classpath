@@ -6,8 +6,6 @@
 	<classpathentry kind="lib" path="Libs/jl1.0.1.jar"/>
 	<classpathentry kind="lib" path="Libs/mp3spi1.9.5.jar"/>
 	<classpathentry kind="lib" path="Libs/tritonus_share.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nurtahirah/Desktop/G52OSC - Nurtahirah &amp; Hui Wen/Source Code/javafx/jfoenix.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nurtahirah/Desktop/scenebuilder-kit-8.3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
