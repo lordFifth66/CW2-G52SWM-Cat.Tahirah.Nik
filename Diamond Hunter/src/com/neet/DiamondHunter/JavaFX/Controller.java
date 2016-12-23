@@ -5,7 +5,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-import java.awt.event.MouseWheelEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
