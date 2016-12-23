@@ -1,3 +1,13 @@
+/**
+ * Diamond Hunter Map Viewer - Coursework 2 G52SWM (AUT16/17)
+ * 
+ * @author Muhammad Amirul Zaquan bin Rosli - 015387
+ * @author Nik Muhammad Faiz bin Mansor  - 015393
+ * @author Nurtahirah binti Abdul Rahman - 015401
+ * @Date 23 Dec 2016
+ * 
+ */
+
 package com.neet.DiamondHunter.JavaFX;
 
 import java.io.BufferedReader;
@@ -10,18 +20,24 @@ import javafx.scene.image.WritableImage;
 
 public class Map {
 	
-	//size of the tiles in pixel
+	/**
+	 * size of the tiles in pixel
+	 */
 	private int tileSize;
 	private int oriTileSize;
 	
-	//map
+	/**
+	 * map
+	 */
 	public int [][] map;
 	private int numTilesAcross;
 	
 	private int numRows;
 	private int numCols;
 	
-	//tiles image store here
+	/**
+	 * tiles image store here
+	 */
 	private Image[][] tiles;
 	
 	
@@ -30,7 +46,9 @@ public class Map {
 		oriTileSize = 16;
 	}
 
-	//load the tiles image into an array
+	/**
+	 * load the tiles image into an array
+	 */
 	private void loadTiles()
     {
         Image tilesSet = new Image("/Tilesets/testtileset.gif");
@@ -54,7 +72,10 @@ public class Map {
 		}
     }
 	
-	//load the position for all tiles based on testmap.map
+	/**
+	 * load the position for all tiles based on testmap.map
+	 * @param tileSize
+	 */
 	public void loadMap(int tileSize)
     {
 		this.tileSize = tileSize;
@@ -84,7 +105,10 @@ public class Map {
     	loadTiles();
     }
 	
-	//draw the map into the scene
+	/**
+	 * draw the map into the scene
+	 * @param gc
+	 */
 	public void draw(GraphicsContext gc) {
 		
 		for(int row = 0; row < numRows; row++) {
