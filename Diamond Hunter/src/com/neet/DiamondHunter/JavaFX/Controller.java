@@ -79,9 +79,9 @@ public class Controller {
     void initialize() {
     	
     	GraphicsContext gc = canvas.getGraphicsContext2D();
-    	//load map
+    	//map size by pixel
     	mapItemSize = 16;
-    	
+    	//load map
     	maps = new Map();
     	maps.loadMap(mapItemSize);
     	
@@ -153,8 +153,8 @@ public class Controller {
     			}
     		});
     	
+    	//zoom in and out the map(incomplete)
     	canvas.setOnScroll((event) -> {
-    	     System.out.println(event.getDeltaY());
     	     if(event.getDeltaY() == 40)
     	    	 mapItemSize++;
     	     else
@@ -166,6 +166,7 @@ public class Controller {
 	     	items.loadItem(mapItemSize);
 	     	 draw(gc);
     	});
+    	
     	//change item status to axe
     	axebutton.setOnAction((event) -> {
     		itemStatus = 0;
