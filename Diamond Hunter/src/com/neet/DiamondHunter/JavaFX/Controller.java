@@ -93,7 +93,7 @@ public class Controller {
     	
     	draw(gc);
 
-    	// default itemStatus which is none
+    	// default itemStatus = 2 which is none 
     	itemStatus = 2;
     	currObject.setText("NONE");
     	//get x and y coordinate when mouse hover on the map

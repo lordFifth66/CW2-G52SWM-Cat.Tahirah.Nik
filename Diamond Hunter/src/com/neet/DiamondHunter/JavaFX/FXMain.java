@@ -1,3 +1,6 @@
+// The entry point of the application.
+// This class loads the fxml gui file containing the map viewer
+
 package com.neet.DiamondHunter.JavaFX;
 
 import javafx.application.Application;
