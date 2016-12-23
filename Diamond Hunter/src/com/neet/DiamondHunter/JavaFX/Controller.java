@@ -30,7 +30,6 @@ import javafx.stage.Stage;
 
 /**
  * this class contains Controller for JavaFX
- * @author Nurtahirah
  *
  */
 public class Controller {
