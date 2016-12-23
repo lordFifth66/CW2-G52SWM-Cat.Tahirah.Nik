@@ -133,7 +133,7 @@ public class Controller {
     					if (!(checkAxe(Objects.axeX, Objects.axeY) &&
     							checkBoat(Objects.boatX, Objects.boatY)))
     					{
-    						conWarning.setText("Warning! \nThe game may not end if\nsuch positions were chosen.");
+    						conWarning.setText("Warning! \nThe game may not end if\nsuch positions were chosen.\nConsider choosing another \nposition.");
     						conWarning.setStyle("-fx-text-fill: red");
     					}
     					else

@@ -35,42 +35,42 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="240.0" style="border: 5px;">
                <children>
-                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current object" wrappingWidth="73.99999797344208">
+                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current object" wrappingWidth="73.99999797344208">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Label fx:id="currObject" alignment="CENTER" contentDisplay="CENTER" layoutX="106.0" layoutY="67.0" prefHeight="27.0" prefWidth="84.0"> 
+                  <Label fx:id="currObject" alignment="CENTER" contentDisplay="CENTER" layoutX="106.0" layoutY="37.0" prefHeight="27.0" prefWidth="84.0"> 
                   	<font>
                     	    <Font name="AvenirLTStd-Book" size="18.0" />
                     </font>
                   </Label>
-                  <Label layoutX="86.0" layoutY="64.0" text=":">
+                  <Label layoutX="86.0" layoutY="30.0" text=":">
                      <font>
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Label fx:id="axeFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="289.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="axeFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="259.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="axeFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="334.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="axeFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="304.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="axebutton" layoutX="7.0" layoutY="235.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                  <Button fx:id="axebutton" layoutX="7.0" layoutY="205.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Axe Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
@@ -82,27 +82,27 @@
                         </Tooltip>
                      </tooltip>
                   </Button>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
+                  <Text fontSmoothingType="LCD" layoutX="21.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y position:" wrappingWidth="114.65625">
                      <font>
                         <Font name="AvenirLTStd-Book" size="19.0" />
                      </font>
                   </Text>
-                  <Label fx:id="boatFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="514.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="boatFieldX" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="484.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="boatFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="559.0" prefHeight="10.0" prefWidth="74.0">
+                  <Label fx:id="boatFieldY" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="529.0" prefHeight="10.0" prefWidth="74.0">
                      <font>
                         <Font name="AvenirLTStd-Book" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="boatbutton" layoutX="7.0" layoutY="462.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                  <Button fx:id="boatbutton" layoutX="7.0" layoutY="432.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="210.0" text="Change Boat Position" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font name="AvenirLTStd-Book" size="17.0" />
                      </font>
@@ -114,7 +114,7 @@
                         </Tooltip>
                      </tooltip>
                   </Button>
-                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="595.0" prefHeight="83.0" prefWidth="195.0" textFill="#ff2222">
+                  <Label fx:id="conWarning" alignment="TOP_LEFT" layoutX="13.0" layoutY="564.0" prefHeight="106.0" prefWidth="204.0" textFill="#ff2222">
                      <font>
                         <Font name="AvenirLTStd-Book" size="15.0" />
                      </font></Label>
@@ -130,11 +130,11 @@
                         </Tooltip>
                      </tooltip>
                   </Button>
-                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/Logo/boatt.png" />
                      </image></ImageView>
-                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="90.0" fitWidth="143.0" layoutX="63.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/Logo/axee.png" />
                      </image>
