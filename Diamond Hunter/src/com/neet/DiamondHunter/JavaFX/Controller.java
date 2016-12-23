@@ -1,3 +1,14 @@
+/**
+ * Diamond Hunter Map Viewer - Coursework 2 G52SWM (AUT16/17)
+ * 
+ * @author Muhammad Amirul Zaquan bin Rosli - 015387
+ * @author Nik Muhammad Faiz bin Mansor  - 015393
+ * @author Nurtahirah binti Abdul Rahman - 015401
+ * @Date 23 Dec 2016
+ * 
+ */
+
+
 package com.neet.DiamondHunter.JavaFX;
 
 import javafx.scene.canvas.Canvas;
@@ -17,7 +28,10 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-//this class contains Controller for JavaFX
+/**
+ * this class contains Controller for JavaFX
+ *
+ */
 public class Controller {
 	@FXML
     private ResourceBundle resources;
@@ -200,7 +214,12 @@ public class Controller {
     		
     }
     
-    //check the tile's type
+    /**
+     * check the tile's type
+     * @param x
+     * @param y
+     * @return
+     */
     private boolean checkTiles(int x, int y)
     {
     	if(maps.map[y][x] < 20)
@@ -209,7 +228,10 @@ public class Controller {
     		return false;    		
     }
     
-    //draw the map and item
+    /**
+     * draw the map and item
+     * @param gc
+     */
     private void draw(GraphicsContext gc)
     {
 		maps.draw(gc);
@@ -222,7 +244,9 @@ public class Controller {
 	 
     }
     
-    //warning dialog box if items' locations are invalid and when no item is chosen
+    /**
+     * warning dialog box if items' locations are invalid and when no item is chosen
+     */
     private void warningSign()
     {
     	Alert alert = new Alert(AlertType.ERROR);
@@ -254,7 +278,12 @@ public class Controller {
 		alert.showAndWait();
     }
     
-    //to check valid axe location
+    /**
+     * to check valid axe location
+     * @param x
+     * @param y
+     * @return
+     */
     private boolean checkAxe(int x, int y)
     {
     	if (y > 31) return false;
@@ -271,7 +300,12 @@ public class Controller {
     	}
     	return true;
     }
-    //to check valid boat location 
+    /**
+     * to check valid boat location 
+     * @param x
+     * @param y
+     * @return
+     */
     private boolean checkBoat(int x, int y)
     {
     	if (y < 8)

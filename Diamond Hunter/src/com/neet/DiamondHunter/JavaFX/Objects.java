@@ -1,3 +1,13 @@
+/**
+ * Diamond Hunter Map Viewer - Coursework 2 G52SWM (AUT16/17)
+ * 
+ * @author Muhammad Amirul Zaquan bin Rosli - 015387
+ * @author Nik Muhammad Faiz bin Mansor  - 015393
+ * @author Nurtahirah binti Abdul Rahman - 015401
+ * @Date 23 Dec 2016
+ * 
+ */
+
 package com.neet.DiamondHunter.JavaFX;
 
 import javafx.scene.canvas.GraphicsContext;
@@ -10,7 +20,9 @@ public class Objects {
 	private Image axe;
 	private Image boat;
 	
-	//coordinate for boat and axe
+	/**
+	 * coordinate for boat and axe
+	 */
     public static int axeX;
     public static int axeY;
     public static int boatX;
@@ -28,7 +40,10 @@ public class Objects {
     	boatY = 12;
 	}
 	
-
+    /**
+     * load axe and boat image
+     * @param itemSize
+     */
 	public void loadItem(int itemSize)
 	{
 		this.itemSize = itemSize;
@@ -47,13 +62,21 @@ public class Objects {
 				); 
 	}
 	
+	/**
+	 * draw axe and boat image
+	 * @param gc
+	 */
 	public void draw(GraphicsContext gc)
 	{
 		gc.drawImage(axe, axeX * itemSize, axeY * itemSize, itemSize, itemSize);
 		gc.drawImage(boat, boatX * itemSize, boatY * itemSize, itemSize, itemSize);
 	}
 	
-	//to get image of axe
+	/**
+	 * to get image of axe
+	 * @param size
+	 * @return
+	 */
 	public ImageView getAxe(int size)
 	{
 		ImageView axeImage = new ImageView(axe);
@@ -63,7 +86,11 @@ public class Objects {
 		return axeImage;
 	}
 	
-	//to get image of boat
+	/**
+	 * to get image of boat
+	 * @param size
+	 * @return
+	 */
 	public ImageView getBoat(int size)
 	{
 		ImageView boatImage = new ImageView(boat);
